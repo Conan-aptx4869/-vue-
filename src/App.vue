@@ -1,33 +1,22 @@
 <template>
   <div id="app">
-    <child :logo="logoMsg"></child>
-    <div>
-      <h1>这</h1>
-    </div>
-    <child :message="parentMsg" @parentData="showMsgFromChild"></child>
-    <preview></preview>
+    <tabBar></tabBar>
   </div>
 </template>
 
 <script>
-  import child from './components/Child';
-  import preview from './components/preview';
+  import tabBar from './components/tabBar'
   export default {
     data () {
-      return {
-        logoMsg:'hello,parent',
-        parentMsg:'hello,child'
+     return{
 
       }
     },
     components: {
-      child,
-      preview
+      tabBar
     },
     methods:{
-      showMsgFromChild (data) {
-        console.log(data);
-      }
+
     },
     created () {
 
